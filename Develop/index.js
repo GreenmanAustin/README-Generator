@@ -1,6 +1,8 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown.js');
+const fs = require('fs');
+
 // TODO: Create an array of questions for user input
 const questions = () => {
     return inquirer.prompt([
@@ -20,13 +22,39 @@ const questions = () => {
         },
         {
             type: 'input',
-            name: 'description',
-            message: "Please describe your project.",
-            validate: descriptionInput => {
-                if (descriptionInput) {
+            name: 'description2',
+            message: "Why did you build this project?",
+            validate: description2Input => {
+                if (description2Input) {
                     return true;
                 } else {
-                    console.log('You need to enter a project description!');
+                    console.log('Oh come on, please tell me why built this project?');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'description3',
+            message: "What problem does your project solve?",
+            validate: description3Input => {
+                if (description3Input) {
+                    return true;
+                } else {
+                    console.log('You must tell me what problem does your project solve?');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'description4',
+            message: "What did you learn by doing this project?",
+            validate: description4Input => {
+                if (description4Input) {
+                    return true;
+                } else {
+                    console.log('You have to, in fact you must, let me know now what you learned by doing this project.  No other way about it!');
                     return false;
                 }
             }
@@ -84,10 +112,10 @@ const questions = () => {
             }
         },
         {
-            type: 'checkbox',
+            type: 'list',
             name: 'licenses',
             message: 'What is the liense for your project?',
-            choices: ['Apache License 2.0', 'Boost Software License 1.0', 'GNU AGPL v3', 'GNU GPL v3', 'GNU LGPL v3', 'Mozilla Public License 2.0', 'MIT License', 'The Unlicense']
+            choices: ['No License', 'Apache License 2.0', 'Boost Software License 1.0', 'GNU AGPL v3', 'GNU GPL v3', 'GNU LGPL v3', 'Mozilla Public License 2.0', 'MIT License', 'The Unlicense']
         },
         {
             type: 'input',
@@ -120,14 +148,22 @@ const questions = () => {
 };
 
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
-
-// TODO: Create a function to initialize app
-function init() { }
-
-// Function call to initialize app
 questions()
     .then(readmeData => {
-        console.log(generateMarkdown(readmeData));
+        return generateMarkdown(readmeData);
+    })
+    .then(markDownPg => {
+        // return new Promise((resolve, reject) => {
+        fs.writeFile('./README.md', markDownPg, err => {
+            if (err) {
+                // reject(err);
+                return;
+            } else {
+                console.log("File created!")
+            }
+        });;
+    })
+    .catch(err => {
+        console.log(err);
     });
+
