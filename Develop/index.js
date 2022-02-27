@@ -1,9 +1,9 @@
-// TODO: Include packages needed for this application
+// Packages for this application
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 const fs = require('fs');
 
-// TODO: Create an array of questions for user input
+// Function that uses inquirer to obtain information from user
 const questions = () => {
     return inquirer.prompt([
         {
@@ -147,22 +147,23 @@ const questions = () => {
     ])
 };
 
-
+// Calls the function to obtain user input
 questions()
+    // sends the data obtained from the user to function to create markdown file
     .then(readmeData => {
         return generateMarkdown(readmeData);
     })
+    // writes the markdown file to a file in the root directory
     .then(markDownPg => {
-        // return new Promise((resolve, reject) => {
         fs.writeFile('./README.md', markDownPg, err => {
             if (err) {
-                // reject(err);
                 return;
             } else {
                 console.log("File created!")
             }
         });;
     })
+    // catches any error from above
     .catch(err => {
         console.log(err);
     });
