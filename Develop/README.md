@@ -1,7 +1,7 @@
 
   # a
 
-  [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]
+  
 
   ## Description
 
@@ -13,10 +13,14 @@
 
   ## Table of Contents
 
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contributing](#contributing)
-  - [Tests](#tests)
+  
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+  
+
 
   ## Installation
 
@@ -28,14 +32,16 @@
 
   ## Contributing
 
-  t
+  g
 
   ## Tests
 
-  t
+  h
 
   
-  ## License
 
-  Apache License 2.0
-    
+  ## Questions
+
+  My Github page is: https://github.com/i
+
+  You can reach me with questions at: j
