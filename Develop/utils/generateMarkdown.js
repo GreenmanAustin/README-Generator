@@ -78,11 +78,11 @@ function generateMarkdown(data) {
 
   ## Description
 
-  - I built this project because: ${data.description2}
+  - I built this project because ${data.description2}
 
-  - My project solves: ${data.description3}
+  - My project ${data.description3}
 
-  - I learned: ${data.description4}
+  - I learned ${data.description4}
 
   ## Table of Contents
 
