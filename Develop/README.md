@@ -1,15 +1,15 @@
 
   # README-Generator
 
-  ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+  ![License](https://img.shields.io/badge/license-Unlicense-blue.svg)
 
   ## Description
 
-  - I built this project because I wanted to practice using NodeJS to do something potentially useful.  I also wanted to spend more time coding and reduce the time spent on ancillary matters, such as creating README.md files for each project.
+  - I built this project because I wanted to practice using NodeJS to do something potentially useful. I also wanted to spend more time coding and reduce the time spent on ancillary matters, such as creating README.md files for each project.
 
   - My project allows a developer to quickly create a quality README.md file with numerous useful details.
 
-  - I learned I learned to use NodeJS, create a CLI program, and use template literals and promises to write better code.
+  - I learned to use NodeJS, create a CLI program, and use template literals and promises to write better code.
 
   ## Table of Contents
 
@@ -25,15 +25,15 @@
 
   ## Installation
 
-  Fork the code from my repository and clone it to your local IDE.  Install the dependencies, which in this case is node modules.
+  Fork the code from my repository and clone it to your local IDE. Install the dependencies, which in this case is node modules.
 
   ## Usage
 
-  After installing, type "node index.js" in the command line while in the folder of containing the index.js file.  Then answer the prompted questions.  The app will generate a README.md file in the root directory.
+  After installing, type "node index.js" in the command line while in the folder of containing the index.js file. Then answer the prompted questions. The app will generate a README.md file in the root directory.
 
   ## Contributing
 
-  All comments and auggestions will be carefully considered and will be greatly appreciated.
+  All comments and suggestions will be carefully considered and will be greatly appreciated.
 
   ## Tests
 
@@ -42,7 +42,7 @@
   
   ## License
 
-  MIT License
+  The Unlicense
 
   ## Questions
 
